@@ -1,0 +1,68 @@
+Google Maps problem -> shortest route, scheduling, etc
+
+Julia Silvia -> talent's program (California)
+Travis MCPHAIL
+    Google Maps
+        2005
+
+Find smaller problems included in bigger ones.
+
+#hashcode en redes
+
+
+EL PROBNLEMA -------------------------
+Nos dan la descripción del plano de la ciudad y de los caminos para todos los autos de esa ciudad.
+Hay que optimizar el cronoframa de luces para minimizar el tiempo de tránsito de modo que 
+    "La mayor cantidad de autos lleguen a destino antes que el tiempo límite"
+
+---Plano de ciudad---
+Calle de un único sentido. Cada una tiene un nombre único. Sólo se cruzan en intersecciones.
+Cada calle conoce un tiempo L que representa el tiempo que tarda un auto en cruzarla.
+No importa cuándo llega un auto a la calle, siempre le falta tiempo L para atravezarla.
+
+Las intersecciones se identifican con un ID numérico 0..1..2....
+Una intersección por lo menos se conecta con una calle que llega y una que sale.
+
+----Semáforos---
+Hay uno al final de cada calle, justo antes de la intersección. 
+Un semáforo puede estar en VERDE o en ROJO.
+Como máximo hay una luz verde en cada intersección.
+Sólo los autos con VERDE pueden entrar en la intersección.
+
+Los autos se encolan y pasan por la intersección de a 1 por segundo.
+
+---Schedule ---
+Se define el orden de luces de los semáforos de la intersección.
+Se arma con el par: calle, duración.
+Sólo puede aparecer una calle una única vez por schedule de intersección
+
+--- Cars ---
+Un auto tiene un CAMINO (secuencia de calles), que viene definido en los archivos INPUT.in
+Un auto llega a una intersección una única vez.
+
+Los autos empiezan al final de la calle actual.
+Cuando un auto llega a su última calle, LA RECORRE y después termina.
+
+
+ ------ ETNRADA ------
+Duración de simulación [1:10⁴]///Cant de intersecciones (i=0, 1, 2, ..., i-1)///Cant de calles [2:10⁵]///Cant de autos [1:10³]///Bonus points por auto que llegue a destino en tiempo y forma [1:10³]
+
+
+Por cada calle...
+intersección_inicio intersec_fin ////// nombre de la calle ///// tiempo que aporta la calle
+
+Por cada auto...
+cantidad de calles que quiere recorrer
+nombres de calles (el auto empieza al final de la primer calle)
+
+
+----- SALIDA ------
+
+Cant de intersecciones Cronometrizadas
+ID de la intersecc
+Cant de In_streets tomadas en cuenta
+Por cada In_street
+    nombre_calle tiempo de VERDE
+
+    
+
